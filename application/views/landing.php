@@ -55,7 +55,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#" class="get-started-btn">DAFTAR</a>
+      <a href="<?= base_url('register') ?>" class="get-started-btn">DAFTAR</a>
 
     </div>
   </header><!-- End Header -->
