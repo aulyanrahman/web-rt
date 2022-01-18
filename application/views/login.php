@@ -41,7 +41,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">LOGIN SISFO RT</h1>
                                         <?= $this->session->flashdata('pesan') ?>
                                     </div>
-                                    <form method="post" action="<?= base_url('auth/proses_login') ?>" class="user">
+                                    <form method="post" action="<?= base_url('auth/login') ?>" class="user">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"

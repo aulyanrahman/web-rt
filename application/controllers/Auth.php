@@ -7,7 +7,7 @@ class Auth extends CI_Controller{
         $this->load->view('login');
     }
 
-    public function proses_login()
+    public function login()
     {
         $this->form_validation->set_rules('username', 'username', 'required');
         $this->form_validation->set_rules('password', 'password', 'required');
@@ -15,11 +15,8 @@ class Auth extends CI_Controller{
         if ($this->form_validation->run() == false) {
             $this->load->view('login');
         } else {
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
-
-            $user = $username;
-            $pass = MD5($password);
+            $user = $this->input->post('username');
+            $pass = md5($this->input->post('password'));
 
             $cek = $this->login_model->cek_login($user, $pass);
 
